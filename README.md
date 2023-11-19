@@ -17,6 +17,6 @@ Mental health is a critical issue that affects many, yet it's often overlooked o
 
 
 ### 📫 Contact
-💌<a href="https://www.linkedin.com/in/dylan-dominguez-sulca/" target="_blank">
+<a href="https://www.linkedin.com/in/dylan-dominguez-sulca/" target="_blank">
       <img src="https://github.com/dylandgz/dylandgz/assets/70587488/38f179b8-c208-45f6-893b-e4d11b6333ee" alt="LinkedIn Logo" style="width: 8%; vertical-align: bottom;">
     </a>
