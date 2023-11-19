@@ -1,0 +1,592 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+
+    padding: 20px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #333;
+    border-bottom: 3px solid #444;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+
+.main-header {
+    text-align: center; 
+    padding: 40px; 
+    background-color: #e9ecef; 
+    margin: 20px auto; 
+    border-radius: 8px; 
+}
+
+.main-header h1 {
+    font-size: 2.5rem; 
+    color: #0056b3; 
+    margin-bottom: 0.5rem; 
+}
+
+.main-header h3 {
+    font-size: 1.5rem; 
+    color: #444; 
+    margin-bottom: 1rem; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+} */
+
+.image-container {
+
+    position: relative;
+    width: 100%;  
+    height: 650px; 
+    overflow: hidden; 
+}
+
+.background, .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+}
+.background{
+    background-size: cover; 
+    padding-top: 30px;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    transform: scaleX(-1);
+
+
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+
+    height: 115%;
+    width: auto;
+    bottom: 0px;
+    left: 70%;
+    transform: translateX(-50%);
+
+    
+}
+
+
+
+.resource-card {
+    background-color: white;  
+    padding: 20px;           
+    border-radius: 15px;      
+    width: 350px;  
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    z-index: 5;  
+    top: 225px;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.resource-card h2 {
+    font-size: 30px;          
+    margin-bottom: 10px;    
+}
+
+.resource-card p {
+    font-size: 20px; 
+    margin-bottom: 20px;   
+}
+
+.resource-card button {
+    background-color: #FFD700; 
+    padding: 10px 20px;      
+    border: none;            
+    border-radius: 5px;     
+    cursor: pointer;          
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+
+#theme-button {
+    font-weight: bold;
+    color: #FFD700; 
+    padding: 10px 20px; 
+    border: 2px solid #FFD700; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-button:hover {
+    background-color: #FFD700; 
+    color: #333; 
+}
+
+
+
+/* Darkmode Styles  */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .navbar,
+.dark-mode .petition-container,
+.dark-mode .petition-para,
+.dark-mode .featured-content-section,
+.dark-mode .newsletter-signup-section,
+.dark-mode .action-cards,
+.dark-mode .mental-health-video-section,
+.dark-mode .modal-content {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+.dark-mode a,
+.dark-mode .navbar a,
+.dark-mode .resource-card button,
+.dark-mode .action-card button,
+.dark-mode .petition-form button,
+.dark-mode .newsletter-form button {
+    color: #ccc;
+}
+
+.dark-mode a:hover,
+.dark-mode .navbar a:hover,
+.dark-mode button:hover {
+    background-color: #2a2a2a;
+}
+
+.dark-mode img {
+    border-color: #444;
+}
+
+.dark-mode .resource-card,
+.dark-mode .action-card,
+.dark-mode .petition-form {
+    background-color: #333;
+    border-color: #444;
+    
+}
+.dark-mode #sign-petition label,
+.dark-mode #sign-petition input {
+    color: #ccc;
+}
+
+.dark-mode .signatures {
+    background-color: #dde4ea;
+    color: #346392;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background-color: #333;
+    color: #ccc;
+    border-color: #444;
+}
+
+/* Scrollbar Styles for Dark Mode */
+.dark-mode::-webkit-scrollbar {
+    background-color: #333;
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+    background-color: #555;
+}
+
+/* Responsive and Media Queries for Dark Mode */
+@media (max-width: 768px) {
+    .dark-mode .overlay-text h2 {
+        font-size: 1.5rem;
+        color: #ccc;
+    }
+}
+
+@media (max-width: 480px) {
+    .dark-mode .overlay-text p {
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+}
+
+
+
+
+/* Petition styles */
+.petition-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    padding: 20px; 
+    background-color: #e6e9ee; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 20px auto; 
+    max-width: 1000px; 
+}
+
+.petition-para {
+    width: 60%; 
+    padding: 0 15px; 
+    font-size: 1rem; 
+    color: #1a3a5f; 
+    line-height: 1.6;
+    text-align: justify; 
+}
+
+.signatures {
+    width: 40%; 
+    padding: 0 15px; 
+    color: #346392; 
+    font-size: 0.9rem;
+    background-color: #dde4ea; 
+    border-radius: 4px; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); 
+    padding: 10px;
+}
+
+.signatures p {
+    margin: 5px 0;
+    padding-left: 10px; 
+    border-left: 3px solid #346392; 
+}
+
+.petition-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 20px; 
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.petition-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.petition-form input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.petition-form button {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.petition-form button:hover {
+    background-color: #0056b3; 
+}
+
+
+.featured-content-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.content-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; 
+}
+
+.content-item {
+  width: 30%; 
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  background: #f4f4f4; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+
+
+.content-item img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-bottom: 1px solid #ddd;
+}
+
+.content-item h4 {
+  padding: 8px 0; 
+  background-color: #fff; 
+}
+
+.content-item p {
+  padding: 0 20px; 
+  background-color: #fff; 
+  flex-grow: 1;
+}
+
+.content-item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+.newsletter-signup-section {
+  background-color: #f4f4f4; 
+  padding: 20px;
+  text-align: center;
+}
+
+.newsletter-form {
+  max-width: 300px; 
+  margin: auto;
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00aaff; 
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+.action-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; 
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 22%; 
+  margin: 10px;
+  text-align: center;
+  background-color: #ffffff; 
+  border: 1px solid #cccccc; 
+  overflow: hidden; 
+}
+
+.action-card img {
+  width: 100%; 
+  height: auto;
+}
+
+.action-card button {
+  padding: 10px 20px;
+  margin-top: auto; 
+  border-top: 1px solid #cccccc; 
+  background-color: #ffffff;
+  color: #333333; 
+  width: 100%; 
+}
+
+@media (max-width: 768px) {
+  .action-card {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-card {
+    flex-basis: 90%; 
+  }
+}
+
+.mental-health-video-section {
+  position: relative;
+  width: 100%; 
+  padding-top: 56.25%;
+  margin: auto;
+  overflow: hidden; 
+  background: url('embed_background.jpg') no-repeat center center; 
+  background-size: cover; 
+}
+
+.video-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+  color: white;
+  text-align: center;
+  width: 100%; 
+  padding: 0 5%; 
+}
+
+.overlay-text h2 {
+  font-size: 2rem; 
+  color: #fff; 
+  margin-bottom: 0.5em;
+}
+
+.overlay-text p {
+  font-size: 1rem; 
+  color: #fff; 
+}
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .overlay-text h2 {
+    font-size: 1.5rem; 
+  }
+  .overlay-text p {
+    font-size: 0.9rem; 
+  }
+}
+
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+
+
+
+
+/* This is part 9 */
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Add this if you need to adjust the z-index of your navbar */
+.navbar {
+  position: relative; /* or 'fixed', depending on your layout */
+  z-index: 10; /* any number higher than the z-index of other elements */
+}
+
+
+/* The modal that covers the background and prevents user interactions */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box that contains all the content and images */
+.modal-content {
+  background-color: lightskyblue;
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ... any additional CSS ... */
