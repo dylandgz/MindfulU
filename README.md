@@ -1,8 +1,7 @@
 # MindfulU
-## Empowering University Minds, One Resource at a Time 🎓
 
 ### Introduction
-Welcome to MindfulU! 🙌 This is a heartfelt project dedicated to pioneering mental health awareness among university students and beyond. In this digital era, academic pressures are immense, and we aim to shine a light on the crucial mental health challenges faced by students. While our focus is on university goers, our resources are valuable for anyone seeking a positive mental shift. 💡
+Welcome to MindfulU! 🙌 This is a heartfelt personal project dedicated to pioneering mental health awareness among university students and beyond. In this digital era, academic pressures are immense, and we aim to shine a light on the crucial mental health challenges faced by students. While our focus is on university goers, our resources are valuable for anyone seeking a positive mental shift. 💡
 
 ### 🤔 Why MindfulU?
 Mental health is a critical issue that affects many, yet it's often overlooked or misunderstood, especially among university students. MindfulU addresses the lack of understanding and recognition of mental health issues in society. By offering vital statistics, resources, and insights, we aim to bridge the gap in public knowledge and provide support for those grappling with mental health challenges. 🌍
